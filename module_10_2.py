@@ -19,7 +19,7 @@ class Knight(threading.Thread):
         # Рыцарь сражается до тех пор, пока не повергнет всех врагов (у всех потоков их 100).
         qty_of_enemies: int = 100
         qty_of_days: int = 0 # сохраняем в переменную кол-во дней боевых действий
-        while qty_of_enemies > 0:
+        while qty_of_enemies:
             # В процессе сражения количество врагов уменьшается на power текущего рыцаря.
             qty_of_enemies -= self.power
             qty_of_days += 1
